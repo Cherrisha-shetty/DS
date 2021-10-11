@@ -1,0 +1,43 @@
+#include <stdio.h>
+#define size 100
+struct student
+{
+    int id;
+    int age;
+    int marks;
+}
+
+void accept_input(struct student *s);
+ {
+    printf("Enter the id:");
+    scanf("%d", s->id);
+    printf("Enter the age:");
+    scanf("%d", s->age );
+    printf("Enter the marks: ");
+    scanf("%d", s->marks);
+ }
+void display_output(struct student *s);
+{
+    printf("student details are:\n");
+    printf("ID- %d\t", s1->id);
+    printf("ID- %d\t", s1->age);
+    printf("ID- %d\t", s1->marks);
+}
+
+int main()
+{
+    struct student s[size];
+    int no_of_students, i;
+    
+    printf("Enter no of students:\n");
+    scanf("%d", &no_of_students);
+    for (i=0; i<no_of_students; i++)
+    {
+        accept_input(s[i]);
+    }
+    for (i=0; i<no_of_students;i++)
+    {
+        display_output(s[i]);
+    }
+    return 0;
+}
